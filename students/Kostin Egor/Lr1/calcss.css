@@ -57,8 +57,11 @@
     font-family:Comic Sans MS, cursive;
     font-weight: 900;
   }
-  body {
+  .bbody {
     background-image: url(2322.jpg);
     background-repeat: no-repeat;
-    background-color:seagreen ;
+    background-color:rgb(23, 31, 26) ;
+  }
+  .txta {
+    color: #ffffff;
   }

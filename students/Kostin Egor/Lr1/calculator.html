@@ -1,66 +1,61 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Калькулятор</title>
   <link rel="stylesheet" href="calcss.css">
+  <script type="text/javascript" src="script.js"></script> 
 </head>
-
-<body>
+<body class="bbody">
   <div align="center"> <!-- div - это базовый html-контейнер, который может содержать в себе другие html-элементы. -->
     <!-- блок с экраном калькулятора, где будет выводиться результат вычислений. -->
     <div  id="result" class="result">
       0
     </div>
-    <!-- блок с кнопками калькулятора. -->
-    <div>
-      <!--горизонтальный ряд из четырех кнопок-->
+    <div> <!-- блок с кнопками калькулятора. --> <!--горизонтальный ряд из четырех кнопок-->
       <div align="center">  
         <button id="btn_op_clear" class="my-btn secondary">C</button>    <!-- про тэг кнопки: https://www.w3schools.com/tags/tag_button.asp -->
         <button id="btn_op_sign" class="my-btn secondary">+/-</button>
         <button id="btn_op_percent" class="my-btn secondary">%</button>
-        <button id="btn_op_div" class="my-btn secondary">/</button>
+        <button id="btn_op_div" class="my-btn primary">/</button>
       </div>
-
       <div align="center">
         <button id="btn_digit_7" class="my-btn">7</button>
         <button id="btn_digit_8" class="my-btn">8</button>
         <button id="btn_digit_9" class="my-btn">9</button>
         <button id="btn_op_mult" class="my-btn primary">x</button>
       </div>
-
       <div align="center">
         <button id="btn_digit_4" class="my-btn">4</button>
         <button id="btn_digit_5" class="my-btn">5</button>
         <button id="btn_digit_6" class="my-btn">6</button>
         <button id="btn_op_minus" class="my-btn primary">-</button>
       </div>
-
       <div align="center">
         <button id="btn_digit_1" class="my-btn">1</button>
         <button id="btn_digit_2" class="my-btn">2</button>
         <button id="btn_digit_3" class="my-btn">3</button>
         <button id="btn_op_plus" class="my-btn primary">+</button>
       </div>
-
       <div align="center">
         <button id="btn_digit_0" class="my-btn">0</button>
         <button id="btn_digit_dot" class="my-btn">.</button>
         <button id="btn_op_equal" class="my-btn primary execute">=</button>
+      </div align="center">
+        <p class ="txta"> ЛР выполнена Костин Е.А. ИС-21 </p>
+        <button id="btn_swap_color" class="my-btn primary execute"> Жми</button>
+        <form action="https://github.com/MuRchi4me" target="_blank">
+        <button>GIT</button>
       </div>
-        <p align="center"><span style="color: rgb(61, 250, 4)">ЛР выполнена Костин Е.А. ИС-21 </span> </p> 
-        <a href="https://github.com/MuRchi4me">github</a>
-        <button id="btn_swap_color" class="my-btn primary execute" align="right">Cмена</button>
-    </div>
-    <form>
-      <select name="Stud">
-        <option value="">-- Автор --</option>
-        <option value="IS">Костин Егор ИС-21</option>
-      </select>
-    </form>
-  </div>
-  Цель данной лабораторной работы - <span style="color:blue;">знакомство</span> с инструментами построения пользовательских интерфейсов web-сайтов:<br />
-  <span style="color:blue;">HTML</span>, <span style="color:blue;">CSS</span>. В ходе выполнения работы, вам предстоит ознакомиться с кодом реализации простого калькулятора, и затем<br />
-  выполнить задания по варианту.
+        <form>
+          <select name="Stud">
+            <option value="">-- Автор --</option>
+            <option value="IS">Костин Егор ИС-21</option>
+          </select>
+        </form>
+      </div>
+      <div align="center">
+        <p class="txta"> Цель данной лабораторной работы - <b>знакомство</b> с инструментами построения пользовательских интерфейсов web-сайтов: <b>HTML</b>, <b>CSS</b>. <br />
+        В ходе выполнения работы, вам предстоит ознакомиться с кодом реализации простого калькулятора, и затем выполнить задания по варианту.</p>   
+      </div>
 </body>
 </html>
