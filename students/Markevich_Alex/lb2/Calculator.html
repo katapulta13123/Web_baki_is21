@@ -6,13 +6,14 @@
 <head>
   <title>Калькулятор</title>
   <link rel="stylesheet" href="calculator.css"> 
+  <script type="text/javascript" src="calculator js.js"></script>
 </head>
 
 <body>
-  <div class="fon" > <!-- div - это базовый html-контейнер, который может содержать в себе другие html-элементы. -->
+  <div id="fon" class="fon"> <!-- div - это базовый html-контейнер, который может содержать в себе другие html-элементы. -->
     
     <!-- блок с экраном калькулятора, где будет выводиться результат вычислений. -->
-    <div id="result" class="result">
+    <div id="result" class="resultik">
       0
     </div>
 
@@ -24,6 +25,7 @@
         <button id="btn_op_sign" class="my-btn secondary">+/-</button>
         <button id="btn_op_percent" class="my-btn secondary">%</button>
         <button id="btn_op_div" class="my-btn primary">/</button>
+        <button id="btn_op_backspace" class="my-btn secondary">backspace</button>
       </div>
 
       <div>
@@ -31,6 +33,7 @@
         <button id="btn_digit_8" class="my-btn">8</button>
         <button id="btn_digit_9" class="my-btn">9</button>
         <button id="btn_op_mult" class="my-btn primary">x</button>
+        <button id="btn_op_kvadrat" class="my-btn secondary">n<sup>2</sup></button>
       </div>
 
       <div>
@@ -38,6 +41,7 @@
         <button id="btn_digit_5" class="my-btn">5</button>
         <button id="btn_digit_6" class="my-btn">6</button>
         <button id="btn_op_minus" class="my-btn primary">-</button>
+        <button id="btn_op_koren" class="my-btn secondary">n<sup>1/2</sup></button>
       </div>
 
       <div>
@@ -45,14 +49,17 @@
         <button id="btn_digit_2" class="my-btn">2</button>
         <button id="btn_digit_3" class="my-btn">3</button>
         <button id="btn_op_plus" class="my-btn primary">+</button>
+        <button id="btn_op_factorial" class="my-btn secondary">n!</button>
       </div>
 
       <div>
         <button id="btn_digit_0" class="my-btn">0</button>
         <button id="btn_digit_dot" class="my-btn">.</button>
         <button id="btn_op_equal" class="my-btn primary execute">=</button>
+        <button id="btn_op_000" class="my-btn secondary">000</button>
       </div>
-      <button id="btn_digit_9" class="my-btn primary execute">сменить тему</button>
+      <button id="btn_op_smenit_temu" class="my-btn primary execute">сменить тему</button>
+      <button id="btn_op_smenit_temu2" class="my-btn primary execute">сменить тему 2</button>
     </div>
   </div>
   <p>
