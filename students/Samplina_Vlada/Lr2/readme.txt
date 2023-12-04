@@ -1,1 +1,0 @@
-https://mora476.github.io/
