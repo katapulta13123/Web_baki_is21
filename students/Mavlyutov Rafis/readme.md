@@ -5,3 +5,4 @@
 
 - [Лабораторная работа](https://arctic-ra.github.io/Labs%20-%201.%20Calc/main.html) — 1
 - [Лабораторная работа](https://arctic-ra.github.io/Labs%20-%202.%20JS-Calc/main.html) — 2
+- [Лабораторная работа](https://arctic-ra.github.io/Labs%20-%203.%20Node%20JS/index.html) — 3
