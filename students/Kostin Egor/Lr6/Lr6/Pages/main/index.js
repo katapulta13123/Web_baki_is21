@@ -17,12 +17,15 @@ export class MainPage {
     }
         
     getHTML() {
-        return (
-            `
-                <div id="main-page" class="d-flex flex-wrap"><div/>
-            `
-        )
+        return `
+            <div id="main-page" class="d-flex flex-column">
+                <button id="refresh-button" class="refresh-button mt-3">Востановить</button>
+                <div id="product-cards-container" class="d-flex flex-wrap"></div>
+                <button id="toggle-button" class="toggle-button mt-3">Переключить ID</button>
+            </div>
+        `;
     }
+    
     renderData(items) {
         // Очищаем контейнер перед отображением новых карточек
         if (this.productCardsContainer) {
@@ -45,6 +48,12 @@ export class MainPage {
             this.renderData(data.response.profiles);
         });
     }
+    getData() {
+        ajax.post(urls.getConversationMembers2(), (data) => {
+            this.renderData(data.response.profiles)
+        })
+        this.ePeerId()
+    }
     togglePeerId() {
         ajax.get(urls.GetUpdatePeer())
         this.updateDataWithPeerId(this.currentPeerId);
@@ -52,12 +61,7 @@ export class MainPage {
     ePeerId() {
         this.updateDataWithPeerId(this.currentPeerId);
     }
-    getData() {
-        ajax.post(urls.getConversationMembers2(), (data) => {
-            console.log(urls.getConversationMembers2())
-            this.renderData(data.response.profiles)
-        })
-    }
+    
     clickCard(e) {
         const cardId = e.target.dataset.id
         const productPage = new ProductPage(this.parent, cardId)
@@ -65,27 +69,20 @@ export class MainPage {
     }
     
     render() {
-        
         this.parent.innerHTML = '';
         const html = this.getHTML();
         this.parent.insertAdjacentHTML('beforeend', html);
-
-        // Добавляем кнопку для переключения между peerId
-        const toggleButton = document.createElement('button');
-        toggleButton.textContent = 'Переключить ID';
-        toggleButton.classList.add('toggle-button');
+        this.getData();
+    
+        const refreshButton = document.getElementById('refresh-button');
+        refreshButton.addEventListener('click', () => {
+            this.ePeerId();
+        });
+    
+        const toggleButton = document.getElementById('toggle-button');
         toggleButton.addEventListener('click', () => {
             this.togglePeerId();
         });
-        const refresh = document.createElement('button');
-        refresh.textContent = 'Востановить';
-        refresh.classList.add('refresh-button');
-        refresh.addEventListener('click', () => {
-            this.ePeerId();
-        });
-        this.parent.appendChild(refresh);
-        this.parent.appendChild(toggleButton);
-        this.getData();
     }
     
 }

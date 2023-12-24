@@ -14,6 +14,7 @@ export class ProductComponent {
                       <div class="col-md-8">
                           <div class="card-body">
                               <h5 class="card-title">${data.first_name} ${data.last_name}</h5>
+                              <p class="card-text">${data.status || 'Статус отсутствует'}</p>
                           </div>
                       </div>
                   </div>
