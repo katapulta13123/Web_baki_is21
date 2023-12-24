@@ -1,0 +1,29 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://old.oblgazeta.ru/media/news_photos/2019/02/06/JX1wV00HTtw_SVyhuog.jpg.1024x0_q85.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.card {
+    width: 540px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+}
+
