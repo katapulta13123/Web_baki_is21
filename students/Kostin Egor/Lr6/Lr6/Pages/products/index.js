@@ -11,7 +11,7 @@ export class ProductPage {
     }
 
     getData() {
-        ajax.post(urls.getUserInfo(this.id), (data) => {
+        ajax.post(urls.getUserInfo2(this.id), (data) => {
             this.renderData(data.response)
         })
     }

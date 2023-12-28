@@ -5,6 +5,7 @@ const port = 3000;
 const accessToken = 'vk1.a.wCUFqT_tt-BQ9CjSKXPPDfoPDJnUYESPhfJ_bcN8nN2Op2Z3PL-mOflE_KR9fBcLzOEkJlj7f5Qia2xOwUyXBzSG07gJzFeMDUylsxntkY3EuusnJr3MVsAVftEoF2-AJkUqQliv60oR-JOTmtCPnj3dKEtVhgdti__4rRbSpvVlHQVhmoIXedJw8NXalF43HMXhQkaTqwsRiSABRjZEKg';
 let peerID = 2000000001
 let conversationMembers = null;
+let UserInfo = null;
 
 async function fetchData(peerId) {
     if (!peerId || isNaN(peerId)) {
@@ -44,25 +45,36 @@ app.get('/update-members', async (req, res) => {
         res.status(400).send(error.message);
     }
 });
-
-app.get('/delete-user/:userId', (req, res) => {
-    const userId = parseInt(req.params.userId);
-
-    // Проверяем, существует ли пользователь
-    const userIndex = conversationMembers.findIndex(member => member.id === userId);
-
-    if (userIndex !== -1) {
-        // Удаляем пользователя из массива
-        conversationMembers.splice(userIndex, 1);
-        res.send(`Пользователь с ID ${userId} успешно удален.`);
-    } else {
-        res.status(404).send('Пользователь не найден');
-    }
-});
-
 app.get('/update-peer', (req, res) => {
     peerID = (peerID === 2000000001) ? 2000000002 : 2000000001;
     res.send('Peer ID обновлён на: ' + peerID);
+});
+
+async function fetchData2(userId) {
+    try {
+        const response = await axios.get('https://api.vk.com/method/users.get', {
+            params: {
+                user_ids: userId,
+                fields: 'photo_400_orig,status',
+                access_token: accessToken,
+                filter: 'friends',
+                v: '5.199'
+            }
+        });
+        UserInfo = response.data;
+    } catch (error) {
+        throw new Error('Ошибка при получении данных: ' + error.message);
+    }
+}
+
+app.post('/get-userInfo', async (req, res) => {
+    try {
+        const { userId } = req.query;
+        await fetchData2(userId);
+        res.json(UserInfo || {});
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
 });
 
 app.listen(port, () => {

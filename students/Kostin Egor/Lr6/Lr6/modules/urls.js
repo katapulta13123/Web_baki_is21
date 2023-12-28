@@ -9,6 +9,9 @@ class Urls {
     getUserInfo(userId) {
         return `${this.url}/users.get?user_ids=${userId}&fields=photo_400_orig&${this.commonInfo}`
     }
+    getUserInfo2(userId) {
+        return `http://127.0.0.1:3000/get-userInfo?userId=${userId}`
+    }
     getGroupMembers(groupId) {
         return `${this.url}/groups.getMembers?group_id=${groupId}&fields=photo_400_orig&${this.commonInfo}`
     }

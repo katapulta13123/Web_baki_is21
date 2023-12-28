@@ -31,7 +31,6 @@ export class ProductCardComponent {
     if (cardElement && deleteButton) {
         deleteButton.addEventListener("click", () => {
             cardElement.remove();
-            // Добавьте здесь код для выполнения других действий после удаления карточки, если необходимо
         });
     }
     }

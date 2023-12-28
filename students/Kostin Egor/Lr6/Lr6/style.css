@@ -86,6 +86,44 @@ body {
     right: 1830px;
     top: 10px;
   }
+  /* Стили для верхних кнопок */
+.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  /* Дополнительные стили по вашему усмотрению */
+}
+
+/* Стили для нижних кнопок */
+.bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  /* Дополнительные стили по вашему усмотрению */
+}
+
+/* Общие стили для кнопок */
+.buttons-container button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* Дополнительные стили по вашему усмотрению */
+}
+
+.refresh-button {
+  
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.toggle-button {
+  background-color: #3498db;
+  color: #fff;
+}
+
   .btn-primary:hover {
     background-color: #0056b3;
   }
