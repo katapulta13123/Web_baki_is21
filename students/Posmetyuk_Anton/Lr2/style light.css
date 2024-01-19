@@ -1,0 +1,120 @@
+.body {
+  background-color:rgb(217,217,217);
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  background-image: url('../HCJ/16806034115111.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.my-btn { 
+    margin-right: 5px;          
+    margin-top: 5px;             
+    width: 60px;                 
+    height: 60px;              
+    border-radius: 0px;       
+    border: none;            
+    background: #000000;         
+    color: rgb(255, 255, 255);              
+    font-size: 25px;          
+    font-family: 'Franklin Gothic Medium';     
+    cursor: pointer;          
+    user-select: none;       
+    font-weight: bold;        
+  } 
+  .my-btn:hover {
+    background: rgb(0,156,155); 
+  }
+  .my-btn:active {
+    filter: brightness(150%); 
+  }
+  
+  .my-btn.primary { 
+    background: #4d4d4d; 
+  }
+  .my-btn.primary:hover {
+    background: rgb(0,156,155); 
+  }
+  .my-btn.primary:active {
+    filter: brightness(150%); 
+  }
+  
+  .my-btn.secondary { 
+    background: #6e6e6ed3;  
+  }
+  .my-btn.secondary:hover {
+    background: rgb(0,156,155); 
+  }
+  .my-btn.secondary:active {
+    filter: brightness(150%); 
+  }
+  
+  .my-btn.execute {       
+    background: rgb(0,156,155);
+  }
+  .my-btn.execute:hover {
+    background: rgb(0,156,155);
+  }
+  .my-btn.execute:active {
+    filter: brightness(150%); 
+  }
+
+  .my-btn.change { 
+    width: 129px; 
+    background: #7a7a7a;
+  }
+  .my-btn.change:hover {
+    background: rgb(207, 207, 207); 
+  }
+  .my-btn.change:active {
+    filter: brightness(50%); 
+  }
+  
+  .result { 
+    width: 255px;
+    height: 80px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding-left: 10px; 
+    background: rgb(0,156,155);
+    text-align: left;    
+    color: #ffffff;     
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium';
+  }
+
+  .my-btn.third{
+    background: rgb(0,156,155);
+  }
+
+  .my-btn.third:active{
+    filter: brightness(150%); 
+  }
+
+  .Text {
+    text-align: center;
+    color:#1f1f1f;
+  }
+
+  .github {
+    text-align: center;
+  }
+
+  .color {
+    color:rgb(0,156,155);
+  }
+
+  .Author {
+    position: absolute;
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  .description {
+    color:#1f1f1f;
+    position: absolute;
+    margin-top: 15%;
+    text-align: center;
+  }

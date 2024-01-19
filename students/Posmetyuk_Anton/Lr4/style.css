@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    height: 950px;
+ }
+
+ .card {
+    width: 540px;
+    background-color: #2c2c2c;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  
+  .card img {
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 80px;
+  }
+  
+  .card-body {
+    height: 200px;
+  }
+  
+  .card-title {
+    text-align: right;
+    color:#1194f0;
+    font-size: 24px;
+  }
+  
+  .card-text {
+    text-align: center;
+    color:#b4b4b4;
+    font-size: 18px;
+  }
+
+  .text1 {
+    text-align: left;
+    color:#1194f0;
+    font-size: 32px;
+  }
+  
+  .text2 {
+    position: absolute;
+    text-align: left;
+    color:#b4b4b4;
+    font-size: 18px;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-primary {
+    color: #ffffff;
+    background-color: #1194f0;
+    border-color: #07426b;
+    border-radius: 0px;
+    text-align: center;
+  }
+  
+  .btn-primary:hover {
+    background-color: #07426b; 
+    border-color: #07426b;
+  }
+
+   #liveToastBtn {
+    width:600px;
+  }
+
+   #back-button {
+    right: 360px;
+    bottom: 233px;
+    width: 599px;
+    position: absolute;
+    z-index: 1;
+    background-color: #CE1141; 
+    border-color: #69001a;
+  }
+
+  #back-button:hover {
+    background-color: #69001a; 
+    border-color: #69001a;
+  }
+
+  .header {
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px 100px;
+    text-align: right;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    border-bottom-left-radius: 80px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .footer {
+    background-color: #333;
+    color: #CE1141;
+    padding: 5px 100px;
+    text-align: right;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    border-top-left-radius: 80px;
+    text-size-adjust: 10px;
+  }
+
+  .footer h1{
+    font-size: 25px;
+  }
+
+  .toast {
+    background-color: #07426b;
+    color: #ffffff;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .toast-header {
+    background-color: #1194f0;
+    color: #ffffff;
+  }
+
+
+
+
